@@ -66,17 +66,11 @@ export class PokemonService {
   }
 
   async remove(id: string) {
-    const pokemon = await this.findOne( id );
-    
-    try {
-      await pokemon.deleteOne();
-      return {
-        status: 'success',
-        message: 'Pokemon deleted successfully'
-      }
-    } catch(error) {
-      this.handleExceptions(error);
-    }
+    const result = await this.pokemonModel.deleteOne( { _id: id } ) //El guion bajo es porque así se llama el ID en Mongo
+
+    if(result.deletedCount === 0) throw new NotFoundException(`Error, no se ha encontrado un Pokemon con el MongoID ${id}`);
+
+    return result;
   }
 
   // Custom functions
