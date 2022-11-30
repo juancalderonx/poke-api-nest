@@ -19,12 +19,11 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Reconstruir la base de datos con la semilla.
+1. Reconstruir la base de datos con la semilla.
       *Esta semilla borrará todos los pokemones existentes en base de datos y hará un inserción múltiple, úsela sólo si no tiene registros o si está seguro de querer borrar los que tenga.*
 ```
 http://Localhost:3000/api/v1/seed
 ```
-
 ---
 
 ## Stack usado
