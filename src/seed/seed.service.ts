@@ -25,7 +25,7 @@ export class SeedService {
       const segments = url.split('/');
       const numberPokemon: number = +segments[ segments.length - 2 ];
 
-      const newPokemon = await this.pokemonModel.create({ name, numberPokemon });
+      const pokemonNuevo = await this.pokemonModel.create({ name, numberPokemon });
     });
 
     return 'Seed executed successfully';
