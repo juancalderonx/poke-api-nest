@@ -15,9 +15,10 @@ import { SeedModule } from './seed/seed.module';
     MongooseModule.forRoot('mongodb://localhost:27017/nest-pokemon'),
 
     PokemonModule,
-    CommonModule,
-    SeedModule,
 
+    CommonModule,
+
+    SeedModule
   ],
   controllers: [],
   providers: [],
