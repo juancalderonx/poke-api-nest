@@ -29,7 +29,8 @@ export class PokemonController {
   }
 
   @Delete(':id')
+  @HttpCode( HttpStatus.NO_CONTENT )
   remove(@Param('id') id: string) {
-    return this.pokemonService.remove(+id);
+    return this.pokemonService.remove(id);
   }
 }
