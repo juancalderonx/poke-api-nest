@@ -65,8 +65,18 @@ export class PokemonService {
 
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} pokemon`;
+  async remove(id: string) {
+    const pokemon = await this.findOne( id );
+    
+    try {
+      await pokemon.deleteOne();
+      return {
+        status: 'success',
+        message: 'Pokemon deleted successfully'
+      }
+    } catch(error) {
+      this.handleExceptions(error);
+    }
   }
 
   // Custom functions
