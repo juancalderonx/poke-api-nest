@@ -19,7 +19,12 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Reconstruir la base de datos con un seed precargado.
+5. Iniciar el proyecto en modo desarrollo.
+```
+yarn start:dev
+```
+
+6. Reconstruir la base de datos con un seed precargado.
    
     *Esta semilla borrará todos los pokemones existentes en base de datos y hará un inserción múltiple, úsela sólo si no tiene registros o si está seguro de querer borrar los que tenga.*
 ```
