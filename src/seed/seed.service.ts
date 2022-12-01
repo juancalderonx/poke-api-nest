@@ -28,7 +28,6 @@ export class SeedService {
     data.results.forEach(({ name, url }) => {
       const segments = url.split('/');
       const number = +segments[ segments.length - 2 ];
-      console.log({name, number});
       pokemonToInsert.push({name, number});
     });
 
