@@ -5,6 +5,10 @@
 # Ejecutar en desarrollo
 
 1. Clonar el repositorio
+```
+git clone https://github.com/juancalderonx/poke-api-nest.git
+```   
+
 2. Ejecutar el siguiente comando.
 ```
 yarn install
@@ -19,12 +23,16 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Iniciar el proyecto en modo desarrollo.
+5. Clonar el archivo ```.env.template``` y renombrar la copia a ```.env```
+
+6. Llenar las variables de entorno definidads en el ```.env```
+
+7. Iniciar el proyecto en modo desarrollo con el siguiente comando:
 ```
 yarn start:dev
 ```
 
-6. Reconstruir la base de datos con un seed precargado.
+8. Reconstruir la base de datos con un seed precargado.
    
     *Esta semilla borrará todos los pokemones existentes en base de datos y hará un inserción múltiple, úsela sólo si no tiene registros o si está seguro de querer borrar los que tenga.*
 ```
