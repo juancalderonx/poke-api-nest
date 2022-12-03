@@ -45,3 +45,15 @@ http://localhost:3000/api/v1/seed
 * **MongoDB**
 * **Docker**
 * **Yarn**
+
+# Production Build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen con el comando:
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. Si ya ha construido la imagen y no han habido cambios, puede usar el siguiente comando para levantar sin reconstruir la aplicación.
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
