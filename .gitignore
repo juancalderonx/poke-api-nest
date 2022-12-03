@@ -3,7 +3,9 @@
 /node_modules
 /mongo
 
-/.env
+.env
+.env.prod
+yarn.lock
 
 # Logs
 logs
